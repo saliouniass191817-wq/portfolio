@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Saliou Niasse - Developpeur Full Stack Junior</title>
-        <meta name="description" content="Portfolio de Saliou Niasse, developpeur full stack junior specialise web, mobile et data/IA.">
+        <title>Saliou Niasse | Développeur Full Stack</title>
+        <meta name="description" content="Portfolio de Saliou Niasse, développeur full stack spécialisé en web, mobile et data/IA.">
 
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700" rel="stylesheet" />
@@ -97,12 +97,13 @@
             </div>
 
             <div class="mx-auto w-full max-w-7xl px-5 py-6 sm:px-8 lg:px-10">
-                <header class="flex flex-col gap-5 rounded-lg border border-black/10 bg-white/64 px-5 py-4 shadow-[0_18px_50px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-white/10 dark:bg-white/6 sm:flex-row sm:items-center sm:justify-between">
+                <header class="site-header flex flex-col gap-5 rounded-lg border border-black/10 bg-white/64 px-5 py-4 shadow-[0_18px_50px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-white/10 dark:bg-white/6 sm:flex-row sm:items-center sm:justify-between">
                     <a href="#hero" class="inline-flex items-center gap-3 font-semibold text-[#111827] dark:text-white">
                         <span class="grid h-11 w-11 place-items-center rounded-lg bg-[#111827] text-sm text-white shadow-lg shadow-[#111827]/20 dark:bg-white dark:text-[#111827]">SN</span>
                         <span>Saliou Niasse</span>
                     </a>
-                    <nav class="flex flex-wrap gap-x-5 gap-y-3 text-sm font-semibold text-[#475569] dark:text-[#cbd5e1]">
+                    <button type="button" class="mobile-nav-button self-end sm:hidden" data-mobile-nav-button aria-expanded="false" aria-controls="site-navigation" aria-label="Ouvrir le menu">☰</button>
+                    <nav id="site-navigation" class="site-nav flex flex-wrap gap-x-5 gap-y-3 text-sm font-semibold text-[#475569] dark:text-[#cbd5e1]" data-mobile-nav data-open="false">
                         <a href="#about" class="transition hover:text-[#0f766e] dark:hover:text-[#5eead4]">Profil</a>
                         <a href="#skills" class="transition hover:text-[#0f766e] dark:hover:text-[#5eead4]">Competences</a>
                         <a href="#journey" class="transition hover:text-[#0f766e] dark:hover:text-[#5eead4]">Parcours</a>
@@ -112,7 +113,7 @@
                 </header>
 
                 <main class="mt-10 space-y-24 pb-10 lg:mt-16">
-                    <section id="hero" class="grid min-h-[calc(100vh-9rem)] gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
+                    <section id="hero" class="reveal grid min-h-[calc(100vh-9rem)] gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-center" data-reveal>
                         <div class="max-w-3xl">
                             <p class="inline-flex rounded-full border border-[#14b8a6]/30 bg-white/70 px-4 py-2 text-sm font-semibold text-[#0f766e] shadow-sm dark:border-[#5eead4]/20 dark:bg-white/8 dark:text-[#5eead4]">Developpeur Full Stack Junior | Web, Mobile & Data/IA</p>
                             <h1 class="mt-7 text-5xl font-bold leading-[1.02] text-[#111827] dark:text-white sm:text-6xl lg:text-7xl">Saliou Niasse conçoit des solutions web, mobile et data intelligentes.</h1>
@@ -181,7 +182,7 @@
                         </div>
                     </section>
 
-                    <section id="about" class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+                    <section id="about" class="reveal grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start" data-reveal>
                         <div>
                             <p class="text-sm font-bold text-[#0f766e] dark:text-[#5eead4]">Profil</p>
                             <h2 class="mt-4 max-w-md text-4xl font-bold leading-tight text-[#111827] dark:text-white">Un profil orienté développement, données et intelligence artificielle.</h2>
@@ -200,7 +201,7 @@
                         </div>
                     </section>
 
-                    <section id="skills" class="space-y-8">
+                    <section id="skills" class="reveal space-y-8" data-reveal>
                         <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                             <div>
                                 <p class="text-sm font-bold text-[#0f766e] dark:text-[#5eead4]">Competences</p>
@@ -242,7 +243,7 @@
                         </div>
                     </section>
 
-                    <section id="journey" class="space-y-8">
+                    <section id="journey" class="reveal space-y-8" data-reveal>
                         <div>
                             <p class="text-sm font-bold text-[#0f766e] dark:text-[#5eead4]">Parcours</p>
                             <h2 class="mt-4 text-4xl font-bold text-[#111827] dark:text-white">Formation et expériences.</h2>
@@ -295,7 +296,7 @@
                         </div>
                     </section>
 
-                    <section id="projects" class="space-y-8">
+                    <section id="projects" class="reveal space-y-8" data-reveal>
                         <div>
                             <p class="text-sm font-bold text-[#0f766e] dark:text-[#5eead4]">Projets</p>
                             <h2 class="mt-4 text-4xl font-bold text-[#111827] dark:text-white">Selection de realisations.</h2>
@@ -322,16 +323,14 @@
                         </div>
                     </section>
 
-                    <section id="contact" class="rounded-lg border border-black/10 bg-[#111827] p-7 text-white shadow-[0_28px_80px_rgba(15,23,42,0.22)] sm:p-10 dark:border-white/10">
+                    <section id="contact" class="reveal rounded-lg border border-black/10 bg-[#111827] p-7 text-white shadow-[0_28px_80px_rgba(15,23,42,0.22)] sm:p-10 dark:border-white/10" data-reveal>
                         <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
                             <div>
                                 <p class="text-sm font-bold text-[#5eead4]">Contact</p>
                                 <h2 class="mt-4 max-w-2xl text-4xl font-bold leading-tight">Pret a donner plus d'impact au prochain projet web ?</h2>
                                 <p class="mt-5 max-w-2xl leading-8 text-[#dbeafe]">Contacte Saliou Niasse pour construire une interface moderne, lisible et adaptee a tes objectifs.</p>
                             </div>
-                            <span class="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 text-sm font-bold text-[#111827] shadow-xl shadow-black/20">
-                                <p>saliouniass191817@gmail.com</p>
-                            </span>
+                            <a href="mailto:saliouniass191817@gmail.com" class="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 text-sm font-bold text-[#111827] shadow-xl shadow-black/20 transition hover:-translate-y-1 hover:bg-[#5eead4]">saliouniass191817@gmail.com</a>
                         </div>
                     </section>
                 </main>

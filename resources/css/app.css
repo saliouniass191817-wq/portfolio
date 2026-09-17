@@ -9,3 +9,87 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+@layer base {
+    :focus-visible {
+        outline: 3px solid #14b8a6;
+        outline-offset: 4px;
+    }
+}
+
+@layer components {
+    .site-header {
+        position: sticky;
+        top: 1rem;
+        z-index: 20;
+    }
+
+    .mobile-nav-button {
+        display: none;
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @media (max-width: 639px) {
+        .site-header {
+            top: 0.75rem;
+        }
+
+        .mobile-nav-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 2.75rem;
+            min-width: 2.75rem;
+            border: 1px solid rgba(15, 23, 42, 0.14);
+            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.7);
+            font-size: 1.35rem;
+            line-height: 1;
+        }
+
+        .dark .mobile-nav-button {
+            border-color: rgba(255, 255, 255, 0.14);
+            background: rgba(255, 255, 255, 0.08);
+            color: white;
+        }
+
+        .site-nav[data-open='false'] {
+            display: none;
+        }
+
+        .site-nav[data-open='true'] {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            border-top: 1px solid rgba(15, 23, 42, 0.1);
+            padding-top: 1rem;
+        }
+
+        .dark .site-nav[data-open='true'] {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+
+        .reveal,
+        .reveal.is-visible {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+    }
+}
