@@ -14,5 +14,7 @@ RUN composer install --no-dev --optimize-autoloader
 RUN mkdir -p storage/framework/{sessions,views,cache} storage/logs bootstrap/cache \
     && chmod -R 775 storage bootstrap/cache
 
+RUN mkdir -p database && touch database/database.sqlite && chmod 664 database/database.sqlite
+
 EXPOSE 10000
 CMD php artisan config:cache && php artisan route:cache && php artisan serve --host=0.0.0.0 --port=${PORT:-10000}
